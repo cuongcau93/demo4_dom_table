@@ -1,0 +1,20 @@
+table{
+ 	border: 1px #00C solid;
+    margin: auto;
+}
+table tr td {
+    padding:15px;
+    border: thin #00C solid;
+
+}
+th{
+	padding:5px;
+    border: thin #00C solid;
+
+}
+.button{
+	width: 80px;
+	height: 30px;
+	background-color: #e8632c;
+	color: white;
+}

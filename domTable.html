@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Table</title>
+	<link rel="stylesheet" href="css/domTable.css">
+</head>
+<body>
+	<div id="show">
+		
+	</div>
+	<script type="text/javascript">
+
+		var table = document.createElement("table");
+		var row = 4;
+		var column = 3;
+		var i;
+		var j;
+		var k = 0;
+
+		for(i = 0; i < row; i++){
+			var rows = document.createElement("tr");
+			rows.setAttribute("id", "democlass");
+
+			for(j = 0; j < column; j++){
+				if(i == 0){
+
+					var thList = ["Name","Age","Email"];
+					var columns = document.createElement("th");
+					var text = document.createTextNode(thList[j]);
+					columns.appendChild(text)
+					rows.appendChild(columns);
+
+					// document.getElementsByTagName("th")[0].setAttribute("id", "title");
+
+				}else{
+
+					var tdList = ["Nguyễn Mạnh Cường","23","cuongnm22@wru.vn","Hà Công Mạnh","24","manhnm22@wru.vn","Nguyễn Thị Mai","25","maint22@wru.vn"];
+					var columns = document.createElement("td");
+					var text = document.createTextNode(tdList[k]);
+					columns.appendChild(text);
+					rows.appendChild(columns);
+					k++;
+				}
+				
+				table.appendChild(rows);
+			}
+		}
+
+		function showMore(){
+			
+			var row = 3;
+			var column = 3;
+			var k = 0;
+			
+			for(i = 0; i < row; i++){
+				var rows = document.createElement("tr");
+				// document.getElementsByTagName("tr").setAttribute("id", "democlass");
+
+				for(j = 0; j < column; j++){
+
+					var tdList = ["Van danh manh","27","manhnm22@wru.vn","Hà Công Mạnh","24","manhnm22@wru.vn","Nguyễn Thị Mai","25","maint22@wru.vn"];
+					var columns = document.createElement("td");
+					var text = document.createTextNode(tdList[k]);
+					columns.appendChild(text);
+					rows.appendChild(columns);
+					k++;			
+					table.appendChild(rows);
+
+				}
+			}
+		}
+
+		document.getElementById('show').appendChild(table);
+
+	</script>
+	<input type="button" value="show More" onclick="showMore()" class="button" >
+</body>
+</html>
